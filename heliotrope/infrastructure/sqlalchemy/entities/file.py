@@ -8,9 +8,9 @@ class FileSchema(ForeignKeySchema):
     __tablename__ = "file"
 
     hasavif: Mapped[bool] = mapped_column(Boolean)
-    hash: Mapped[str] = mapped_column(String)
+    hash: Mapped[str] = mapped_column(String(255))
     height: Mapped[int] = mapped_column(Integer)
-    name: Mapped[str] = mapped_column(String)
+    name: Mapped[str] = mapped_column(String(255))
     width: Mapped[int] = mapped_column(Integer)
     hasjxl: Mapped[bool] = mapped_column(Boolean, default=False)
     haswebp: Mapped[bool] = mapped_column(Boolean, default=False)

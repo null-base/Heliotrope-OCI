@@ -9,4 +9,4 @@ class TypeSchema(Schema):
 
     __tablename__ = "type"
 
-    type: Mapped[str] = mapped_column(String, nullable=False, unique=True)
+    type: Mapped[str] = mapped_column(String(255), nullable=False, unique=True)

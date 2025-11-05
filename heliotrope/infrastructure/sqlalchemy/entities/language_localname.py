@@ -9,4 +9,4 @@ class LanguageLocalnameSchema(Schema):
 
     __tablename__ = "language_localname"
 
-    name: Mapped[str] = mapped_column(String, nullable=False, unique=True)
+    name: Mapped[str] = mapped_column(String(255), nullable=False, unique=True)

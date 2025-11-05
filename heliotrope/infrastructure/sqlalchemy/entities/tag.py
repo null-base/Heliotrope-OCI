@@ -8,8 +8,8 @@ from heliotrope.infrastructure.sqlalchemy.mixin import Schema
 class TagSchema(Schema):
     __tablename__ = "tag"
 
-    tag: Mapped[str] = mapped_column(String)
-    url: Mapped[str] = mapped_column(String)
+    tag: Mapped[str] = mapped_column(String(255))
+    url: Mapped[str] = mapped_column(String(255))
     female: Mapped[bool] = mapped_column(Boolean, default=False)
     male: Mapped[bool] = mapped_column(Boolean, default=False)
 

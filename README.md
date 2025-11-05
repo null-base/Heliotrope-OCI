@@ -1,4 +1,4 @@
-# Heliotrope
+# Heliotrope for OCI
 
 [![CI](https://github.com/Saebasol/Heliotrope/actions/workflows/ci.yml/badge.svg)](https://github.com/Saebasol/Heliotrope/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/Saebasol/Heliotrope/branch/main/graph/badge.svg?token=CKRUjYaPSW)](https://codecov.io/gh/Saebasol/Heliotrope)
@@ -49,7 +49,7 @@ pnpm add @saebasol/delphinium
 ```toml
 [dependencies]
 delphinium = "1.0.0"
-``` 
+```
 
 
 ## Related Projects
@@ -60,4 +60,3 @@ delphinium = "1.0.0"
   * Bouquet is a easy deployment solution for Heliotrope and Hibiscus.
 * [Hyacinth](https://github.com/Saebasol/Hyacinth)
   * A tool to create a personal offline manga library. depends on Heliotrope for metadata.
-  

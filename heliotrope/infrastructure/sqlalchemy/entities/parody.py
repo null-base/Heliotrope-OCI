@@ -7,5 +7,5 @@ from heliotrope.infrastructure.sqlalchemy.mixin import Schema
 class ParodySchema(Schema):
     __tablename__ = "parody"
 
-    parody: Mapped[str] = mapped_column(String, unique=True)
-    url: Mapped[str] = mapped_column(String)
+    parody: Mapped[str] = mapped_column(String(255), unique=True)
+    url: Mapped[str] = mapped_column(String(255))

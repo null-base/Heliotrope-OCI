@@ -24,7 +24,7 @@ class LanguageSchema(ForeignKeySchema):
     )
 
     galleryid: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    url: Mapped[str] = mapped_column(String)
+    url: Mapped[str] = mapped_column(String(255))
 
     language_info: Mapped[LanguageInfoSchema] = relationship(
         LanguageInfoSchema,

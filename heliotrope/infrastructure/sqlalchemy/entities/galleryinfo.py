@@ -3,7 +3,7 @@ from datetime import datetime
 from functools import partial
 from typing import Optional
 
-from sqlalchemy import Boolean, Date, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Date, DateTime, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from heliotrope.infrastructure.sqlalchemy.association import (
@@ -54,11 +54,11 @@ class GalleryinfoSchema(Schema):
     __tablename__ = "galleryinfo"
 
     date: Mapped[datetime] = mapped_column(DateTime, nullable=False)
-    title: Mapped[str] = mapped_column(String, nullable=False)
-    japanese_title: Mapped[Optional[str]] = mapped_column(String)
-    galleryurl: Mapped[str] = mapped_column(String, nullable=False)
-    video: Mapped[Optional[str]] = mapped_column(String)
-    videofilename: Mapped[Optional[str]] = mapped_column(String)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    japanese_title: Mapped[Optional[str]] = mapped_column(Text)
+    galleryurl: Mapped[str] = mapped_column(String(255), nullable=False)
+    video: Mapped[Optional[str]] = mapped_column(String(255))
+    videofilename: Mapped[Optional[str]] = mapped_column(String(255))
 
     type_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("type.id", ondelete="RESTRICT"), nullable=True

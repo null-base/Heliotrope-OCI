@@ -10,5 +10,5 @@ from heliotrope.infrastructure.sqlalchemy.mixin import Schema
 class CharacterSchema(Schema):
     __tablename__ = "character"
 
-    character: Mapped[str] = mapped_column(String, unique=True)
-    url: Mapped[str] = mapped_column(String)
+    character: Mapped[str] = mapped_column(String(255), unique=True)
+    url: Mapped[str] = mapped_column(String(255))

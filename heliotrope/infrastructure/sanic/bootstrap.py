@@ -70,7 +70,8 @@ async def startup(heliotrope: Heliotrope, loop: AbstractEventLoop) -> None:
 
     heliotrope.ctx.sa = SQLAlchemy.create(heliotrope.config.GALLERYINFO_DB_URL)
     heliotrope.ctx.hitomi_la = await HitomiLa.create(heliotrope.config.INDEX_FILES)
-    heliotrope.ctx.mongodb = await MongoDB.create(heliotrope.config.INFO_DB_URL)
+    mongo_url = heliotrope.config.INFO_DB_URL + "/admin?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true"
+    heliotrope.ctx.mongodb = await MongoDB.create(mongo_url)
 
     heliotrope.ctx.hitomi_la_galleryinfo_repository = HitomiLaGalleryinfoRepository(
         heliotrope.ctx.hitomi_la

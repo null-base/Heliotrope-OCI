@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "aiohttp>=3.12.15",
-    "asyncpg>=0.30.0",
+    "asyncmy>=0.2.10",
     "deepdiff>=8.6.1",
     "pymongo>=4.15.1",
     "pythonmonkey>=1.2.0",
@@ -45,4 +45,3 @@ lint.select = []
 packages = ["heliotrope"]
 disable_error_code = ["attr-defined", "union-attr", "name-defined", "used-before-def", "call-arg", "arg-type", "call-overload", "valid-type", "var-annotated", "override", "return", "empty-body", "return-value", "assignment", "method-assign", "type-var", "operator", "index", "list-item", "dict-item", "typeddict-item", "typeddict-unknown-key", "has-type", "import", "no-redef", "func-returns-value", "abstract", "type-abstract", "safe-super", "valid-newtype", "exit-return", "name-match", "literal-required", "no-overload-impl", "unused-coroutine", "top-level-await", "assert-type", "truthy-function", "str-format", "str-bytes-safe", "annotation-unchecked", "syntax", "misc"]
 disallow_untyped_defs = true
-
